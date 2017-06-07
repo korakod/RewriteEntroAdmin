@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+  show = true ;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  Show(){
+    this.show = true;
+
+  }
+  Hide(){
+    this.show = false;
   }
 
 }

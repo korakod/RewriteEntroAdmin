@@ -3,16 +3,16 @@
 </h1>
 <div>
   <!--<img src="" alt=""> -->
-  <div>
+  <div *ngIf="show" >
     <img width="500" height="281" src="https://www.it24hrs.com/wp-content/uploads/2013/10/outlook-hotmail.jpg" class="attachment-medium size-medium" alt="" scale="0">
   </div>
   <h3>
     Hello
   </h3>
   <div>
-    <button class="btn btn-default" >Show</button>
-    <button class="btn btn-default" >Hide</button>
+    <button class="btn btn-success" (click)="Show()">Show</button>
+    <button class="btn btn-error" (click)="Hide()" >Hide</button>
  
   </div>
-   
+    
 </div>   
