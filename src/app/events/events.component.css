@@ -1,6 +1,13 @@
 #event {
-    align-content: center;
     width: 90%;
-    height:600px;
+    height:900px;
     margin: auto;
+    text-align: left;
+    /*background: none !important;*/
+    background-color: white !important;
+    background: white !important;
+    border-color: white !important;
+}
+h3 {
+    color: red;
 }
