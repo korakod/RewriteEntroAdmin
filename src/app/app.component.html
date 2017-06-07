@@ -2,7 +2,58 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <app-product></app-product><hr>
-  <app-article></app-article><hr>
-  <app-events></app-events><hr>
+  <table  class="table table-striped" border="1">
+    <tr> 
+      <th>Type</th>
+      <th>New</th>
+      <th>Show</th>
+    </tr>
+    <tr>
+      <th>
+        Product
+      </th> 
+      <td>  
+        <div>
+          <label for="subject">หัวข้อ</label>
+        </div>
+        <div> 
+          <input type="text" [(ngModel)]="productName">
+        </div>
+        <div>
+          <label for="detail">รายละเอียด</label>
+        </div>
+        <div>
+           <textarea  rows="4" cols="25"  [(ngModel)]="productDeatil" >ggg</textarea>
+        </div>
+          <button class="btn btn-success" (click)="addNewProduct(productName,productDeatil)"> Add Product </button>         
+      </td>
+      <td>
+        <app-product [product]="product" *ngFor="let product of productNew"> </app-product>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Article
+      </th> 
+      <td>        
+      </td>
+      <td>
+         <app-article></app-article>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Events
+      </th> 
+      <td>        
+      </td>
+      <td>
+        <app-events></app-events>
+      </td>
+    </tr>
+    
+  </table>
+ 
+ 
+  
 </div>
