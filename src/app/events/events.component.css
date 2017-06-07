@@ -1,13 +1,36 @@
 #event {
+    display: block;
     width: 90%;
-    height:900px;
+    height:1080px;
     margin: auto;
     text-align: left;
-    /*background: none !important;*/
-    background-color: white !important;
-    background: white !important;
-    border-color: white !important;
+    border-radius: 4px;
+    padding: 6px;
+
 }
+
 h3 {
     color: red;
+}
+
+pre {
+    display: block;
+    padding: none;
+    margin: none;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color:white;
+    border: none;
+    border-radius: 4px;
+}
+
+#events {
+    display: block;
+    margin-top: 20px;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid gray;
+    padding: 6px;
 }
