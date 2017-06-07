@@ -18,7 +18,10 @@
       </td>
     </tr>
     <tr>
-      <td>        
+      <td> 
+        <label for="Subject">หัวข้อ</label>
+          <input type="text" [(ngModel)]="productName">
+          <button (click)="addNewName(newName)"> New Article </button>        
       </td>
       <td>
          <app-article></app-article>

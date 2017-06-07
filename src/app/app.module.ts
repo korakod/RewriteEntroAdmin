@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { EventsComponent } from './events/events.component';
 import { ArticleComponent } from './article/article.component';
+import { ArticleNewComponent } from './article/article-new/article-new.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { ArticleComponent } from './article/article.component';
     ProductComponent,
     EventsComponent,
     ArticleComponent,
+    ArticleNewComponent,
   ],
   imports: [
     BrowserModule,

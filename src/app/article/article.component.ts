@@ -21,4 +21,6 @@ export class ArticleComponent implements OnInit {
     log = 'モンキー・D・ルフィロロノア・ゾロ';
     console.log(log);
   }
+
+
 }
