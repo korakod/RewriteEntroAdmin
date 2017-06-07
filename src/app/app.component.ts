@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   productNew =[{subject:'' ,detail:''}];
-  articleNews =[{articleName1:'' ,articleDetail1:''}];
+  articleNews =[{nameArticle:'' ,detailArticle:''}];
 
   addNewProduct(productName,productDeatil){
       let newProduct ={subject: productName ,detail:productDeatil};
@@ -17,7 +17,7 @@ export class AppComponent {
 
   }
   addNewArticle(articleName, articleDeatil) {
-    let newArticle = {articleName1: articleName , articleDetail1: articleDeatil};
+    let newArticle = {nameArticle: articleName , detailArticle: articleDeatil};
      this.articleNews.push( newArticle);
   }
 }

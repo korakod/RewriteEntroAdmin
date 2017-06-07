@@ -2,12 +2,16 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <table  class="table" border="3">
+  <table  class="table table-striped" border="1">
     <tr> 
+      <th>Type</th>
       <th>New</th>
       <th>Show</th>
     </tr>
     <tr>
+      <th>
+        Product
+      </th> 
       <td>  
         <div>
           <label for="subject">หัวข้อ</label>
@@ -28,6 +32,9 @@
       </td>
     </tr>
     <tr>
+      <th>
+        Article
+      </th> 
       <div>
           <label for="subject">หัวข้อ</label>
         </div>
@@ -41,11 +48,15 @@
            <textarea  rows="4" cols="25"  [(ngModel)]="articleDeatil" ></textarea>
         </div>
           <button class="btn btn-success" (click)="addNewArticle(articleName,articleDeatil)"> New Article </button>
+      
       <td>
-         <app-article [articLe]="article2" *ngFor="let article2 of articleNews"></app-article>
+         <app-article [articleAdd]="article2" *ngFor="let article2 of articleNews"></app-article>
       </td>
     </tr>
     <tr>
+      <th>
+        Events
+      </th> 
       <td>        
       </td>
       <td>
