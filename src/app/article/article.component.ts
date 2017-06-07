@@ -16,4 +16,9 @@ export class ArticleComponent implements OnInit {
     this.showMessage = 'ONEPIECE';
     }
 
+  // tslint:disable-next-line:one-line
+  showLog(log){
+    log = 'モンキー・D・ルフィロロノア・ゾロ';
+    console.log(log);
+  }
 }
