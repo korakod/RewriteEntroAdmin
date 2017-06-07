@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-
+  showMessage;
   constructor() { }
 
   ngOnInit() {
   }
+
+  article1(message) {
+    this.showMessage = 'ONEPIECE';
+    }
 
 }
