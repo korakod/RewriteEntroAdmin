@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ArticleUp } from 'app/article/article-up';
 
 @Component({
   selector: 'app-article',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+   @Input() articLe = ArticleUp;
+
   showMessage;
   constructor() { }
 
   ngOnInit() {
   }
+
+  articleXX = [{articleName1: 'TAN', articleDetail1: '19999'}]
 
   article1(message) {
     this.showMessage = 'ONEPIECE';

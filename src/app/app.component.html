@@ -9,22 +9,40 @@
     </tr>
     <tr>
       <td>  
-          <label for="Subject">หัวข้อ</label>
+        <div>
+          <label for="subject">หัวข้อ</label>
+        </div>
+        <div> 
           <input type="text" [(ngModel)]="productName">
-          <button (click)="addNewName(newName)"> New Name </button>         
+        </div>
+        <div>
+          <label for="detail">รายละเอียด</label>
+        </div>
+        <div>
+           <textarea  rows="4" cols="25"  [(ngModel)]="productDeatil" >ggg</textarea>
+        </div>
+          <button class="btn btn-success" (click)="addNewProduct(productName,productDeatil)"> Add Product </button>         
       </td>
       <td>
-        <app-product> </app-product>
+        <app-product [product]="product" *ngFor="let product of productNew"> </app-product>
       </td>
     </tr>
     <tr>
-      <td> 
-        <label for="Subject">หัวข้อ</label>
-          <input type="text" [(ngModel)]="productName">
-          <button (click)="addNewName(newName)"> New Article </button>        
-      </td>
+      <div>
+          <label for="subject">หัวข้อ</label>
+        </div>
+        <div> 
+          <input type="text" [(ngModel)]="articleName">
+        </div>
+        <div>
+          <label for="detail">รายละเอียด</label>
+        </div>
+        <div>
+           <textarea  rows="4" cols="25"  [(ngModel)]="articleDeatil" ></textarea>
+        </div>
+          <button class="btn btn-success" (click)="addNewArticle(articleName,articleDeatil)"> New Article </button>
       <td>
-         <app-article></app-article>
+         <app-article [articLe]="article2" *ngFor="let article2 of articleNews"></app-article>
       </td>
     </tr>
     <tr>
