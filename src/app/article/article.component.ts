@@ -15,7 +15,7 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
   }
 
-  articleXX = [{articleName1: 'TAN', articleDetail1: '19999'}]
+
 
   article1(message) {
     this.showMessage = 'ONEPIECE';
