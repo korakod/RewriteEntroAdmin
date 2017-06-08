@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ArticleUp } from 'app/article/article-up';
 
 @Component({
   selector: 'app-article',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+   @Input() articleAdd = ArticleUp;
+
   showMessage;
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
   article1(message) {
     this.showMessage = 'ONEPIECE';
@@ -21,4 +26,6 @@ export class ArticleComponent implements OnInit {
     log = 'モンキー・D・ルフィロロノア・ゾロ';
     console.log(log);
   }
+
+
 }

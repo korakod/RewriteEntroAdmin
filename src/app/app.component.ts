@@ -10,16 +10,23 @@ import "rxjs/add/operator/map";
 })
 
 export class AppComponent {
+
   productNew=[];
 
   constructor(public productService:ProductService ,public http:Http){
         this.productNew = this.productService.product;
   }
 
+  articleNews =[{nameArticle:'' ,detailArticle:''}];
+
+
   addNewProduct(productName,productDeatil){
       let newProduct ={subject: productName ,detail:productDeatil};
      this.productNew.push( newProduct );
 
   }
-  
+  addNewArticle(articleName, articleDeatil) {
+    let newArticle = {nameArticle: articleName , detailArticle: articleDeatil};
+     this.articleNews.push( newArticle);
+  }
 }

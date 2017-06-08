@@ -17,4 +17,14 @@ You can also find Relics in game containing the Blueprints and parts required to
     <div id="events"><h3>NEW ITEMS ARE ENTERING PRIME VAULT!</h3>
     <pre>If you already have these Primes and Relics in your Inventory, they will remain and you can continue to play them. If not, gear up, grab your fellow Tenno and find the Relics now.</pre>
     <img src="https://n8k6e2y6.ssl.hwcdn.net/uploads/228eaca6ccff5c7487022244296b77ed.jpg" width="600" height="230"/></div>
+
+    <div id="events"><h3>NEW WEAPONS ACCESS UNTIL 2020</h3>
+    <input type="text" [(ngModel)]="newWeapon">
+    <button (click)="addNewWeapon(newWeapon)">add weapon</button>
+    
+    
+        <table>
+            <app-new-weapon [weapon]="weapon" *ngFor="let weapon of weaponList"></app-new-weapon>
+        </table>
+    </div>
 </div>
