@@ -1,4 +1,6 @@
 import { WeaponDataService } from './events/service/weapon-data.service';
+import {HttpModule} from '@angular/http';
+import { ProductService } from './services/product.service'; 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -23,9 +25,12 @@ import { IndexComponent } from './events/new-weapon/index/index.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule 
+
   ],
-  providers: [WeaponDataService],
+
+  providers: [ProductService,WeaponDataService],
   bootstrap: [AppComponent]
 })
 
