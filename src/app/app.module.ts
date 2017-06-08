@@ -1,3 +1,5 @@
+import {HttpModule} from '@angular/http';
+import { ProductService } from './services/product.service'; 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,9 +17,11 @@ import { ArticleComponent } from './article/article.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule 
+
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 
