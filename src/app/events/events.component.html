@@ -22,9 +22,12 @@ You can also find Relics in game containing the Blueprints and parts required to
     <input type="text" [(ngModel)]="newWeapon">
     <button (click)="addNewWeapon(newWeapon)">add weapon</button>
     
+
+    <table style="color:cornflowerblue;"><tr><td style="width: 100px;font-weight: 900;">Index List:</td><app-index></app-index></tr></table>
+
     
         <table>
-            <app-new-weapon [weapon]="weapon" *ngFor="let weapon of weaponList"></app-new-weapon>
+            <app-new-weapon [weapon]="weapon" *ngFor="let weapon of wData.weaponList"></app-new-weapon>
         </table>
     </div>
 </div>

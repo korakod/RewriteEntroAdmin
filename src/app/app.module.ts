@@ -1,13 +1,20 @@
+
 import { ArticleServicesService } from './article/article-services.service';
+import { WeaponDataService } from './events/service/weapon-data.service';
+import {HttpModule} from '@angular/http';
+import { ProductService } from './services/product.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { EventsComponent } from './events/events.component';
+import { ProductListComponent } from './product-list/product-list.component';
 import { ArticleComponent } from './article/article.component';
 import { NewWeaponComponent } from './events/new-weapon/new-weapon.component';
 import { PicArticleComponent } from './article/pic-article/pic-article.component';
+import { IndexComponent } from './events/new-weapon/index/index.component';
+
 
 
 
@@ -18,14 +25,21 @@ import { PicArticleComponent } from './article/pic-article/pic-article.component
     EventsComponent,
     ArticleComponent,
     NewWeaponComponent,
-    PicArticleComponent
+    PicArticleComponent,
+    ProductListComponent,
+    IndexComponent
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
+
   ],
-  providers: [ArticleServicesService],
+
+
+  providers: [ProductService,WeaponDataService,ArticleServicesService],
+
   bootstrap: [AppComponent]
 })
 
