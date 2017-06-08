@@ -1,3 +1,4 @@
+import { ArticleServicesService } from './article/article-services.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +10,7 @@ import { NewWeaponComponent } from './events/new-weapon/new-weapon.component';
 import { PicArticleComponent } from './article/pic-article/pic-article.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +18,14 @@ import { PicArticleComponent } from './article/pic-article/pic-article.component
     EventsComponent,
     ArticleComponent,
     NewWeaponComponent,
-    PicArticleComponent,
+    PicArticleComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ArticleServicesService],
   bootstrap: [AppComponent]
 })
 

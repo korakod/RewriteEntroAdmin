@@ -1,3 +1,16 @@
 <p>
   pic-article works!
 </p>
+<!--<div>
+  <h3>{{articleAdd.nameArticle}}</h3>
+  <h3>{{articleAdd.detailArticle}}</h3>
+  
+</div>-->
+ <div *ngFor="let article of articleService.articleArray">
+    
+    <p>{{article.nameArticle}} : {{article.detailArticle}} : {{article.age}}</p>
+    <!--<img src="{{article.picArt}}" width="500" alt="">-->
+    <hr>
+  </div>
+
+ 

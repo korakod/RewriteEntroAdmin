@@ -35,6 +35,7 @@
       <th>
         Article
       </th> 
+      <td>
       <div>
           <label for="subject">หัวข้อ</label>
         </div>
@@ -47,10 +48,19 @@
         <div>
            <textarea  rows="4" cols="25"  [(ngModel)]="articleDeatil" ></textarea>
         </div>
+        <div>
+           <label for="urlImg">URL PICTURE</label>
+        </div>
+         <div> 
+          <input type="text" [(ngModel)]="articleUrl">
+        </div>
+        <br>
           <button class="btn btn-success" (click)="addNewArticle(articleName,articleDeatil)"> New Article </button>
-      
+      </td>
       <td>
-         <app-article [articleAdd]="article2" *ngFor="let article2 of articleNews"></app-article>
+        <app-pic-article></app-pic-article>
+         <app-article [articleAdd]="article2" *ngFor="let article2 of articleArray"></app-article>
+          <!--<app-article></app-article>-->
       </td>
     </tr>
     <tr>

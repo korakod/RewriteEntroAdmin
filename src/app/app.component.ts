@@ -1,3 +1,4 @@
+import { ArticleServicesService } from './article/article-services.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,15 +10,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   productNew =[{subject:'' ,detail:''}];
-  articleNews =[{nameArticle:'' ,detailArticle:''}];
+  
+  articleArray = [];
+  
+  constructor(public articleService: ArticleServicesService) {
+    this.articleArray = this.articleService.articleArray;
+  }
 
   addNewProduct(productName,productDeatil){
       let newProduct ={subject: productName ,detail:productDeatil};
      this.productNew.push( newProduct );
 
   }
-  addNewArticle(articleName, articleDeatil) {
-    let newArticle = {nameArticle: articleName , detailArticle: articleDeatil};
-     this.articleNews.push( newArticle);
+
+  addNewArticle(nameArticle, detailArticle) {
+    let newArticle = {nameArticle: nameArticle , detailArticle: detailArticle ,age :'', picArt: ''};
+     this.articleArray.push( newArticle);
   }
 }
