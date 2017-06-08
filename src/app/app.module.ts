@@ -9,6 +9,7 @@ import { EventsComponent } from './events/events.component';
 import { ArticleComponent } from './article/article.component';
 import { NewWeaponComponent } from './events/new-weapon/new-weapon.component';
 import { PicArticleComponent } from './article/pic-article/pic-article.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PicArticleComponent } from './article/pic-article/pic-article.component
     ArticleComponent,
     NewWeaponComponent,
     PicArticleComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

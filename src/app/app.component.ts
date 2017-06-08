@@ -22,9 +22,10 @@ export class AppComponent {
 
   addNewProduct(productName,productDeatil){
       let newProduct ={subject: productName ,detail:productDeatil};
-     this.productNew.push( newProduct );
+      this.productNew.push( newProduct );
 
   }
+
   addNewArticle(articleName, articleDeatil) {
     let newArticle = {nameArticle: articleName , detailArticle: articleDeatil};
      this.articleNews.push( newArticle);

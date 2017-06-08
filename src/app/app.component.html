@@ -28,7 +28,12 @@
           <button class="btn btn-success" (click)="addNewProduct(productName,productDeatil)"> Add Product </button>         
       </td>
       <td>
+        <div> 
         <app-product [product]="product" *ngFor="let product of productNew"> </app-product>
+        </div>
+        <div>
+          <app-product-list>  </app-product-list>
+        </div>
       </td>
     </tr>
     <tr>
