@@ -17,8 +17,8 @@ export class EventsComponent implements OnInit {
 
   addNewWeapon(newWeapon){
     if(newWeapon.length>0){
-    let weapon = {linkImg:'https://pbs.twimg.com/profile_images/584092186133667840/9i1QAPVJ.jpg',name: newWeapon,type: 'Undefind',damage: 'Undefind'};
-    this.weaponList.push(weapon);
+    let weaponx = {linkImg:'https://pbs.twimg.com/profile_images/584092186133667840/9i1QAPVJ.jpg',name: newWeapon,type: 'Undefind',damage: 'Undefind'};
+    this.weaponList.push(weaponx);
   }
   }
 
