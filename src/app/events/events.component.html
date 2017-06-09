@@ -21,6 +21,12 @@ You can also find Relics in game containing the Blueprints and parts required to
     <div id="events"><h3>NEW WEAPONS ACCESS UNTIL 2020</h3>
     <input type="text" [(ngModel)]="newWeapon">
     <button (click)="addNewWeapon(newWeapon)">add weapon</button>
+
+
+    <button (click)="getWeaponArray()">update new weapon</button>
+    <input type="text" [(ngModel)]="xpostWeapon">
+    <button (click)="postWeapon(xpostWeapon)">post weapon to web-API</button>
+
     
 
     <table style="color:cornflowerblue;"><tr><td style="width: 100px;font-weight: 900;">Index List:</td><app-index></app-index></tr></table>
