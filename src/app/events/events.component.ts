@@ -10,10 +10,10 @@ import { Component, OnInit} from '@angular/core';
 
 export class EventsComponent implements OnInit {
 
-  weaponList = [];
+  // weaponList = [];
   
   constructor(public wData:WeaponDataService){
-    this.weaponList = wData.weaponList;
+    // this.weaponList = wData.weaponList;
   }
 
 
@@ -22,6 +22,25 @@ export class EventsComponent implements OnInit {
     let weaponx = {linkImg:'https://pbs.twimg.com/profile_images/584092186133667840/9i1QAPVJ.jpg',name: newWeapon,type: 'Undefind',damage: 'Undefind'};
     this.wData.weaponList.push(weaponx);
   }
+}
+
+  getWeaponArray(){
+    this.wData.getUpdate().subscribe(data=>{
+      this.wData.weaponList = data;
+    });
+  }
+
+  postWeapon(daxta){
+    if(daxta.length>0){
+      this.wData.postWeaponData(daxta).subscribe(data => {
+      console.log(data);
+      if (data.assign == 2001){
+           alert(daxta + " has assigned.");
+      }else{
+        alert(daxta + " post failed.");
+      }
+    });
+    }
   }
 
   ngOnInit() {}
