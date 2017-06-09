@@ -21,6 +21,6 @@ export class ProductComponent implements OnInit {
     this.show = false;
   }
 
-  @Input () product = Product;
+  @Input () product : Product;
  
 }

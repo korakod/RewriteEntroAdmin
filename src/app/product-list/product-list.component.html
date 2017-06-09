@@ -1,13 +1,26 @@
-<p>
-  product-list works!
-</p>
+<body>
+  <p>
+    product-list works!
+  </p>
 
-<!--<h1>
+  <!--<h1>
 {{productService.product.subject}}
 </h1>
 <h3>
  {{productService.product.detail}}
 </h3>-->
-<ul>
-  <li *ngFor="let product of productService.product">   {{product.subject}}  {{product.detail}} </li>
-</ul>
+  <div id="1">
+    <ul>
+      <li *ngFor="let product of productService.product"> {{product.subject}} {{product.detail}} </li>
+    </ul>
+    <div>
+      <button class="btn btn-succcess" (click)="getProductsList()">
+    Get Product-List
+
+  </button>
+    </div>
+    <div>
+      {{productService.product.subject}}
+    </div>
+  </div>
+</body>

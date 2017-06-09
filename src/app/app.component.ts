@@ -13,28 +13,33 @@ import { Http } from '@angular/http';
 export class AppComponent {
 
 
-
+  productName;
+  productNew;
+  productDetail;
   articleArray = [];
 
-  productNew= [];
+ 
 
-  constructor(public productService:ProductService ,public http:Http,public articleService: ArticleServicesService){
-        this.productNew = this.productService.product;
-        this.articleArray = this.articleService.articleArray;
+  constructor(public productService: ProductService, public http: Http, public articleService: ArticleServicesService) {
+    this.productService.getProductsList().subscribe(data => {
+      this.productService.product = data;
+       
+    });
+    this.articleArray = this.articleService.articleArray;
   }
 
 
 
 
-  addNewProduct(productName,productDeatil){
-      let newProduct ={subject: productName ,detail:productDeatil};
-      this.productNew.push( newProduct );
+  addNewProduct(productName, productDeatil) {
+    let newProduct = { subject: productName, detail: productDeatil };
+    this.productNew.push(newProduct);
 
   }
 
 
   addNewArticle(nameArticle, detailArticle) {
-    let newArticle = {nameArticle: nameArticle , detailArticle: detailArticle ,age :'', picArt: ''};
-     this.articleArray.push( newArticle);
+    let newArticle = { nameArticle: nameArticle, detailArticle: detailArticle, age: '', picArt: '' };
+    this.articleArray.push(newArticle);
   }
 }
